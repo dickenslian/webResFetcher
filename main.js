@@ -1,12 +1,12 @@
-var sourceFiles  = [],      //读取的js文件
-    gamePath = '',          //项目路径
-    gameHost = '';          //服务器主机地址
+var refFiles  = [],      //读取的js文件
+    resHost = '',        //服务器主机地址
+    resPath = '';        //项目路径
 
 /*
 example:
-var sourceFiles  = ['1.js', '2.js', '3.js', '4.js', '5.js'],    //读取的js文件
-    gamePath = '/vector-runner-remix/assets-1.1.4/',            //项目路径
-    gameHost = 'static.tresensa.com';                           //服务器主机地址
+var refFiles  = ['1.js', '2.js', '3.js', '4.js', '5.js'],      //读取的js文件
+    resHost = 'static.tresensa.com',                           //服务器主机地址
+    resPath = '/vector-runner-remix/assets-1.1.4/';            //项目路径
 */
 
 var http = require('http'), 
@@ -20,8 +20,8 @@ var http = require('http'),
     imgPath;
     
 //生成文件内容数组
-for (var i =0; i < sourceFiles.length; i ++) {
-    fileContent = fs.readFileSync(sourceFiles[i]) ;
+for (var i =0; i < refFiles.length; i ++) {
+    fileContent = fs.readFileSync(refFiles[i]) ;
     sourceContents.push(fileContent);
 }
 
@@ -44,10 +44,10 @@ for(var j = 0; j < imgPaths.length; j++) {
 
 function getResource(path) {
     var httpOptions = {
-        host: gameHost,
+        host: resHost,
         port: 80
     };
-    httpOptions.path = gamePath + path;
+    httpOptions.path = resPath + path;
     //获取图片的路径
     var index = path.lastIndexOf('/');
     var folderPath = path.substr(0,index);
