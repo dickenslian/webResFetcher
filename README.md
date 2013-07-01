@@ -12,11 +12,11 @@ WebResFetcher的实现原理是分析JS代码，使用正则表达式匹配JS文
 
 ## 使用方法：
 只需配置3个参数即可，分别是：
-+ refFiles：下载到本地的JS文件，数据类型为数组
++ refFiles：用于分析图片路径的JS文件，数据类型为数组
 + resHost：服务器主机地址
 + resPath：项目路径
 
 例子：
-> var refFiles  = ['1.js', '2.js', '3.js', '4.js', '5.js'],      
+> var refFiles  = ['game-1.1.4.min.js', 'PxLoader.min.js', 'PxLoaderImage.min.js', 'tge-0.3.5.min.js', 'viewporter.min.js'],      
 >     resHost = 'static.tresensa.com',                           
 >     resPath = '/vector-runner-remix/assets-1.1.4/';            
