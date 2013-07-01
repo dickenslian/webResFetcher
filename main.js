@@ -4,7 +4,7 @@ var refFiles  = [],      //读取的js文件
 
 /*
 example:
-var refFiles  = ['1.js', '2.js', '3.js', '4.js', '5.js'],      //读取的js文件
+var refFiles = ['game-1.1.4.min.js', 'PxLoader.min.js', 'PxLoaderImage.min.js', 'tge-0.3.5.min.js', 'viewporter.min.js'],
     resHost = 'static.tresensa.com',                           //服务器主机地址
     resPath = '/vector-runner-remix/assets-1.1.4/';            //项目路径
 */
