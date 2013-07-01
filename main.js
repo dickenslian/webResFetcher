@@ -1,13 +1,13 @@
-var refFiles  = [],      //读取的js文件
-    resHost = '',        //服务器主机地址
-    resPath = '';        //项目路径
+// var refFiles  = [],      //读取的js文件
+//     resHost = '',        //服务器主机地址
+//     resPath = '';        //项目路径
 
-/*
-example:
+
+//example:
 var refFiles = ['game-1.1.4.min.js', 'PxLoader.min.js', 'PxLoaderImage.min.js', 'tge-0.3.5.min.js', 'viewporter.min.js'],
     resHost = 'static.tresensa.com',                           //服务器主机地址
     resPath = '/vector-runner-remix/assets-1.1.4/';            //项目路径
-*/
+
 
 var http = require('http'), 
     fs = require('fs'), 
